@@ -1,6 +1,7 @@
 # Proyecto: Pruebas automatizadas para comprobar la funcionalidad de la aplicación web Urban.Routes.
 
 ## Descripción del proyecto:
+
 - Este proyecto consiste en automatizar pruebas para comprobar la funcionalidad de la aplicación web Urban.Routes, mediante el desarrollo del metodo POM por sus siglas en Ingles: Page Object Model (Modelo de objetos de página).
 
 ## Descripción de las tecnologías y técnicas utilizadas.
@@ -14,10 +15,19 @@
 - Controlador para navegador Chrome(). Versión 121.0.6167.161.
 
 ## Contenido de los archivos del proyecto:
-- Archivo data.py. Este contiene todos los datos de entrada necesarios para la funcionalidad de la aplicación web Urban.Routes. 
-- Archivo main.py. Este contiene el desarrollo del metodo POM con la clase UrbanRoutesPage, con los metodos que interactuan con los elementos y TestUrbanRoutes, donde se encuentran las funciones de pruebas de la aplicación web Urban.Routes.
+
+- Archivo data.py:Este contiene todos los datos de entrada necesarios para la funcionalidad de la aplicación web Urban.Routes. 
+- Archivo retrieve_phone_code.py: En este archivo se encuentra la función para devolver el código que se solicita despues de agregar un número de teléfono. 
+- Archivo selector.py: Este contiene todos los elementos de la aplicación web necesarios para las pruebas. Se debe importar el modulo: from selenium.webdriver.common.by import By.
+- Archivo urban_routes_page.py: Este contiene la clase UrbanRoutesPage con todos los métodos, con los cuales se interactua en las pruebas. Se deben importar los siguientes modulos: from selenium.webdriver.support import expected_conditions, from selenium.webdriver.support.wait import WebDriverWait  
+- Archivo test_urban_routes.py: Este contiene la clase TestUrbanRoutes, donde se encuentran todas las funciones de pruebas de la aplicación web Urban.Routes. Se deben importar los siguientes modulos: from selenium import webdriver, from urban_routes_page import UrbanRoutesPage.
 
 ## Instrucciones de cómo ejecutar las pruebas:
+
+
+- La ejecución paso a paso de estas pruebas se observan en el navegador Chrome mediante el controlador de selenium. 
+- Para ejecutar las pruebas se utiliza el comando pytest. 
+- Las pruebas son:
 
 1. Configurar la dirección: Se localizaron los elementos correspondientes a los campos 'Desde' y 'Hasta' y se introdujeron las direcciones mediante el método de selenium "send_keys".
 2. Seleccionar la tarifa Comfort: Se localizó el elemento de "tarifa comfort" y se seleccionó mediante el método de selenium "click".
